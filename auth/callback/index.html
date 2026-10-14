@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Authorization received</title></head>
+<body><p>Authorization received. You can close this window.</p>
+<p>code: <span id="code"></span></p><p>state: <span id="state"></span></p>
+<script>
+var p = new URLSearchParams(window.location.search);
+document.getElementById('code').textContent = p.get('code') || '';
+document.getElementById('state').textContent = p.get('state') || '';
+</script></body></html>
